@@ -1,18 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css"; // Import styles
+import logo from "../assets/256.avif"; // Ensure correct path
 
 function Header() {
   return (
     <header>
-      {/* Small top banner */}
+      {/* Small top banner with Logo & University Name */}
       <div className="top-banner">
+        <img src={logo} alt="University Logo" />
         <h2>The University of Tampa</h2>
       </div>
 
-      {/* Large middle banner */}
+      {/* Large middle banner (CIRT + Subtitle) */}
       <div className="main-banner">
-        <h1>Criminology Institute for Research and Training</h1>
+        <h1 className="cirt-title">CIRT <br /> 
+        <span style={{ fontSize: "22px" }}>
+          Criminology Institute for Research and Training
+        </span>
+        </h1>
       </div>
 
       {/* Navigation banner */}
